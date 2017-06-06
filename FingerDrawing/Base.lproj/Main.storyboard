@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FingerDrawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tL9-wo-mJN" customClass="DrawableView" customModule="FingerDrawing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3dG-OV-GvC">
+                                <rect key="frame" x="16" y="688" width="382" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaJ-xf-cvi">
+                                        <rect key="frame" x="0.0" y="10" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="aQa-RH-HyM"/>
+                                            <constraint firstAttribute="height" constant="20" id="xla-fd-kPj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeSmallStroke" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNM-aZ-Fa0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaQ-0K-igG">
+                                        <rect key="frame" x="65.666666666666671" y="5" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="J1k-P8-G0A"/>
+                                            <constraint firstAttribute="width" constant="30" id="euc-jF-lNN"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeMediumStroke" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xhu-58-QKK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdk-Hw-Iu3">
+                                        <rect key="frame" x="131.66666666666666" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="XBw-zs-xwj"/>
+                                            <constraint firstAttribute="height" constant="40" id="hIS-Tm-QPa"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeLargeStroke" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJK-w7-ntP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-9b-Al5">
+                                        <rect key="frame" x="207.33333333333334" y="5" width="30" height="30"/>
+                                        <state key="normal" title="Text"/>
+                                        <connections>
+                                            <action selector="changeText" destination="BYZ-38-t0r" eventType="touchUpInside" id="c2r-Tg-p3F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="stK-sM-6Oi">
+                                        <rect key="frame" x="271.33333333333331" y="5" width="44" height="30"/>
+                                        <state key="normal" title="Eraser"/>
+                                        <connections>
+                                            <action selector="changeMode" destination="BYZ-38-t0r" eventType="touchUpInside" id="EXv-KG-7VS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B9-2Z-DMv">
+                                        <rect key="frame" x="346" y="5" width="36" height="30"/>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearCanvas" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tsp-He-wvT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tL9-wo-mJN" secondAttribute="trailing" id="1DI-1H-0RX"/>
+                            <constraint firstItem="tL9-wo-mJN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HNm-Bh-wBG"/>
+                            <constraint firstItem="3dG-OV-GvC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="Q1A-Jz-roc"/>
+                            <constraint firstItem="3dG-OV-GvC" firstAttribute="centerX" secondItem="tL9-wo-mJN" secondAttribute="centerX" id="csP-cH-mEI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3dG-OV-GvC" secondAttribute="bottom" constant="8" symbolic="YES" id="jXG-IH-Mip"/>
+                            <constraint firstItem="3dG-OV-GvC" firstAttribute="top" secondItem="tL9-wo-mJN" secondAttribute="bottom" constant="8" id="jm7-5X-P8M"/>
+                            <constraint firstItem="tL9-wo-mJN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xD3-mT-Ga3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="1B9-2Z-DMv" id="eLH-Nu-Qkk"/>
+                        <outlet property="drawableView" destination="tL9-wo-mJN" id="0dz-6i-Bpj"/>
+                        <outlet property="eraserButton" destination="stK-sM-6Oi" id="IZ8-VW-Fe7"/>
+                        <outlet property="largeStroke" destination="Sdk-Hw-Iu3" id="nwL-BK-Btg"/>
+                        <outlet property="middleStroke" destination="AaQ-0K-igG" id="mI6-nY-200"/>
+                        <outlet property="smallStroke" destination="YaJ-xf-cvi" id="h5x-Hw-kWE"/>
+                        <outlet property="textButton" destination="d0W-9b-Al5" id="WOl-xr-GQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="122.28260869565219"/>
+        </scene>
+    </scenes>
+</document>
